@@ -10,11 +10,11 @@ export const Todo = () => {
   const [todo, setTodo] = useState('');
 
   const addTodo = async () => {
-    const doc = addDoc(collection(FIRESTORE, 'todos'), {
-      title: 'novo teste de todo',
+    const doc = await addDoc(collection(FIRESTORE, 'todos'), {
+      title: todo,
       done: false,
     });
-    console.log(doc);
+    setTodo('');
   };
 
   return (
@@ -31,9 +31,10 @@ export const Todo = () => {
       />
 
       <Button
+        disabled={todo === ''}
         mode="contained-tonal"
         style={{ width: '100%', marginTop: 16, paddingVertical: 4 }}
-        onPress={() => addTodo()}>
+        onPress={addTodo}>
         ADD TODO
       </Button>
 
