@@ -10,9 +10,9 @@ export const Root = () => {
     navigation.replace('todo');
   };
   return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', marginHorizontal: 24 }}>
       <Text variant="headlineLarge">Welcome to TODO</Text>
-      <Button onPress={handleToList} mode="contained-tonal">
+      <Button style={{ width: '100%' }} onPress={handleToList} mode="contained-tonal">
         Go to list
       </Button>
     </View>
