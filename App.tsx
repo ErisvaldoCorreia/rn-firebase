@@ -15,8 +15,16 @@ export default function App() {
     <NavigationContainer>
       <PaperProvider>
         <Stack.Navigator initialRouteName="home">
-          <Stack.Screen options={{ headerShown: false }} name="home" component={Root} />
-          <Stack.Screen name="todo" component={Todo} />
+          <Stack.Screen
+            options={{ headerShown: false }}
+            name="home"
+            component={Root}
+          />
+          <Stack.Screen
+            options={{ headerShown: false }}
+            name="todo"
+            component={Todo}
+          />
           <Stack.Screen name="detail" component={Detail} />
         </Stack.Navigator>
       </PaperProvider>
